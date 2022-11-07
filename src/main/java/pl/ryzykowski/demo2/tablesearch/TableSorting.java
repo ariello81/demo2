@@ -31,21 +31,24 @@ public class TableSorting {
     }
 
     private int partition(Integer[] table, int lowIndex, int highIndex) {
-        Integer pivot = table[highIndex-1];
+
+        Integer pivot = table[highIndex];
         int i = lowIndex-1;
 
-        for (int j=0; j<table.length; j++) {
+        for (int j=lowIndex; j<highIndex; j++) {
             if (table[j] <= pivot) {
                 i++;
                 Integer swap = table[i];
                 table[i] = table[j];
                 table[j] = swap;
+                operations++;
             }
         }
 
-        int swap = table[i+1];
+        Integer swap = table[i+1];
         table[i+1] = table[highIndex];
         table[highIndex] = swap;
+        operations++;
 
         return i+1;
     }

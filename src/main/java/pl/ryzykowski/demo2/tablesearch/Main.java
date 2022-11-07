@@ -76,6 +76,7 @@ public class Main {
         tsort.quickSorting(tableUnsorted, 0, tableUnsorted.length-1);
         System.out.println("quick sorting: " +  + (System.nanoTime() - start));
         System.out.println(Arrays.asList(tableUnsorted));
+        System.out.println("operations counter: " + tsort.getOperations());
     }
 
     //https://www.samouczekprogramisty.pl/podstawy-zlozonosci-obliczeniowej/
