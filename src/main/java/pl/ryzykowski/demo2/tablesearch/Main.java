@@ -66,13 +66,17 @@ public class Main {
 
         TableSorting tsort = new TableSorting();
 
-        start = System.nanoTime();
+        /*start = System.nanoTime();
         tsort.bubbleSortingAsc(tableUnsorted);
         System.out.println("bubble sorting: " +  + (System.nanoTime() - start));
         System.out.println(Arrays.asList(tableUnsorted));
-        System.out.println("operations counter: " + tsort.getOperations());
-    }
+        System.out.println("operations counter: " + tsort.getOperations());*/
 
+        start = System.nanoTime();
+        tsort.quickSorting(tableUnsorted, 0, tableUnsorted.length-1);
+        System.out.println("quick sorting: " +  + (System.nanoTime() - start));
+        System.out.println(Arrays.asList(tableUnsorted));
+    }
 
     //https://www.samouczekprogramisty.pl/podstawy-zlozonosci-obliczeniowej/
     //https://www.baeldung.com/java-quicksort
